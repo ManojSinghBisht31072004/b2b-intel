@@ -1,0 +1,57 @@
+name: B2B Intel Pipeline — Daily Run
+
+on:
+  schedule:
+    # Runs every day at 06:00 UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    # Also allows manual trigger from GitHub UI
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create data directories
+        run: mkdir -p data/raw data/clean
+
+      - name: Run Pipeline (Scrape → Clean → Store)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python pipeline.py
+
+      - name: Upload raw data as artifact (for debugging)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: raw-data-${{ github.run_id }}
+          path: data/raw/
+          retention-days: 7
+
+      - name: Upload clean data as artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: clean-data-${{ github.run_id }}
+          path: data/clean/
+          retention-days: 14
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "❌ Pipeline failed on $(date)"
+          echo "Check the logs above for details."

@@ -1,0 +1,230 @@
+2026-04-22 07:45:53,479 [INFO] ============================================================
+2026-04-22 07:45:53,497 [INFO] ============================================================
+2026-04-22 07:45:53,498 [INFO] Scraping RemoteOK API...
+2026-04-22 07:45:56,075 [INFO] RemoteOK: raw 99 jobs fetched
+2026-04-22 07:45:56,075 [INFO] RemoteOK: 99 valid jobs extracted
+2026-04-22 07:45:56,075 [INFO] Scraping HN Who Is Hiring...
+2026-04-22 07:45:58,513 [INFO] HN thread found: story id=22665398
+2026-04-22 07:45:59,429 [INFO] HN: fetching 150 comments...
+2026-04-22 07:47:45,067 [INFO] Scraping RemoteOK API...
+2026-04-22 07:47:46,041 [INFO] RemoteOK: raw 99 jobs fetched
+2026-04-22 07:47:46,044 [INFO] RemoteOK: 99 valid jobs extracted
+2026-04-22 07:47:46,044 [INFO] Scraping HN Who Is Hiring...
+2026-04-22 07:47:46,833 [INFO] HN thread found: story id=22665398
+2026-04-22 07:47:47,471 [INFO] HN: fetching 150 comments...
+2026-04-22 07:48:13,780 [INFO] HN: 143 job postings extracted
+2026-04-22 07:48:13,862 [INFO]    Saved to: data\raw\jobs_raw_20260422_021813.json
+2026-04-22 07:48:13,931 [INFO] Starting clean. Input: 242 jobs
+2026-04-22 07:48:13,945 [ERROR] Pipeline failed: unhashable type: 'list'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\hiring_project\pipeline.py", line 43, in run_pipeline
+    df = run_cleaner()
+         ^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\hiring_project\cleaner\cleaner.py", line 221, in run_cleaner
+    df = clean(raw)
+         ^^^^^^^^^^
+  File "C:\Users\hp\Desktop\hiring_project\cleaner\cleaner.py", line 163, in clean
+    df.drop_duplicates(inplace=True)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\frame.py", line 6818, in drop_duplicates
+    result = self[-self.duplicated(subset, keep=keep)]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\frame.py", line 6958, in duplicated
+    labels, shape = map(list, zip(*map(f, vals)))
+                              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\frame.py", line 6926, in f
+    labels, shape = algorithms.factorize(vals, size_hint=len(self))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\algorithms.py", line 795, in factorize
+    codes, uniques = factorize_array(
+                     ^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\algorithms.py", line 595, in factorize_array
+    uniques, codes = table.factorize(
+                     ^^^^^^^^^^^^^^^^
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7281, in pandas._libs.hashtable.PyObjectHashTable.factorize
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7195, in pandas._libs.hashtable.PyObjectHashTable._unique
+TypeError: unhashable type: 'list'
+2026-04-22 07:48:13,960 [INFO] 
+============================================================
+2026-04-22 07:48:13,961 [INFO] ============================================================
+2026-04-22 07:49:58,425 [INFO] HN: 143 job postings extracted
+2026-04-22 07:49:58,532 [INFO]    Saved to: data\raw\jobs_raw_20260422_021958.json
+2026-04-22 07:50:31,255 [INFO] ============================================================
+2026-04-22 07:50:31,263 [INFO] ============================================================
+2026-04-22 07:50:31,263 [INFO] Scraping RemoteOK API...
+2026-04-22 07:50:32,154 [INFO] RemoteOK: raw 99 jobs fetched
+2026-04-22 07:50:32,154 [INFO] RemoteOK: 99 valid jobs extracted
+2026-04-22 07:50:32,154 [INFO] Scraping HN Who Is Hiring...
+2026-04-22 07:50:32,932 [INFO] HN thread found: story id=22665398
+2026-04-22 07:50:33,768 [INFO] HN: fetching 150 comments...
+2026-04-22 07:52:38,485 [INFO] HN: 143 job postings extracted
+2026-04-22 07:52:38,598 [INFO]    Saved to: data\raw\jobs_raw_20260422_022238.json
+2026-04-22 07:52:38,703 [INFO] Starting clean. Input: 242 jobs
+2026-04-22 07:52:38,707 [ERROR] Pipeline failed: unhashable type: 'list'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\hiring_project\pipeline.py", line 43, in run_pipeline
+    df = run_cleaner()
+         ^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\hiring_project\cleaner\cleaner.py", line 221, in run_cleaner
+    df = clean(raw)
+         ^^^^^^^^^^
+  File "C:\Users\hp\Desktop\hiring_project\cleaner\cleaner.py", line 163, in clean
+    df.drop_duplicates(inplace=True)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\frame.py", line 6818, in drop_duplicates
+    result = self[-self.duplicated(subset, keep=keep)]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\frame.py", line 6958, in duplicated
+    labels, shape = map(list, zip(*map(f, vals)))
+                              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\frame.py", line 6926, in f
+    labels, shape = algorithms.factorize(vals, size_hint=len(self))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\algorithms.py", line 795, in factorize
+    codes, uniques = factorize_array(
+                     ^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\algorithms.py", line 595, in factorize_array
+    uniques, codes = table.factorize(
+                     ^^^^^^^^^^^^^^^^
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7281, in pandas._libs.hashtable.PyObjectHashTable.factorize
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7195, in pandas._libs.hashtable.PyObjectHashTable._unique
+TypeError: unhashable type: 'list'
+2026-04-22 07:52:38,746 [INFO] 
+============================================================
+2026-04-22 07:52:38,751 [INFO] ============================================================
+2026-04-22 07:57:38,790 [INFO] ============================================================
+2026-04-22 07:57:38,790 [INFO] 🚀 B2B Intel Pipeline Starting
+2026-04-22 07:57:38,790 [INFO] ============================================================
+2026-04-22 07:57:38,790 [INFO] 
+📡 STEP 1: Scraping...
+2026-04-22 07:57:38,791 [INFO] Scraping RemoteOK API...
+2026-04-22 07:57:39,771 [INFO] RemoteOK: raw 99 jobs fetched
+2026-04-22 07:57:39,771 [INFO] RemoteOK: 99 valid jobs extracted
+2026-04-22 07:57:39,777 [INFO] Scraping HN Who Is Hiring...
+2026-04-22 07:57:40,461 [INFO] HN thread found: story id=22665398
+2026-04-22 07:57:41,176 [INFO] HN: fetching 150 comments...
+2026-04-22 08:00:01,057 [INFO] HN: 143 job postings extracted
+2026-04-22 08:00:01,106 [INFO] ✅ Scraping complete. Total jobs: 242
+2026-04-22 08:00:01,106 [INFO]    Saved to: data\raw\jobs_raw_20260422_023001.json
+2026-04-22 08:00:01,106 [INFO]    → 242 raw jobs collected
+2026-04-22 08:00:01,106 [INFO] 
+🧹 STEP 2: Cleaning...
+2026-04-22 08:00:01,180 [INFO] Starting clean. Input: 242 jobs
+2026-04-22 08:00:01,201 [INFO] Duplicates removed: 0
+2026-04-22 08:00:01,266 [INFO] ✅ Cleaning complete. Output: 99 jobs
+2026-04-22 08:00:01,288 [INFO] Saved: data\clean\jobs_clean_20260422_023001.csv
+2026-04-22 08:00:01,288 [INFO] Saved: data\clean\jobs_clean_latest.json
+2026-04-22 08:00:01,289 [INFO] 
+📋 CLEANING DECISIONS:
+2026-04-22 08:00:01,291 [INFO]   duplicate_strategy: Keep first occurrence, drop rest by job_id
+2026-04-22 08:00:01,291 [INFO]   missing_company: Fill with 'Unknown Company'
+2026-04-22 08:00:01,291 [INFO]   missing_title: Fill with 'Unknown Role'
+2026-04-22 08:00:01,292 [INFO]   missing_location: Fill with 'Remote' (majority of scraped jobs are remote)
+2026-04-22 08:00:01,292 [INFO]   missing_description: Fill with empty string — not required for core analytics
+2026-04-22 08:00:01,292 [INFO]   salary_missing: Keep as None/null — don't impute; salary varies wildly
+2026-04-22 08:00:01,293 [INFO]   tags_empty: Leave as empty list — not all jobs have tags
+2026-04-22 08:00:01,293 [INFO]   date_normalisation: Parse to ISO 8601 UTC. Invalid dates → scraped_at fallback
+2026-04-22 08:00:01,293 [INFO]   company_normalisation: Strip HTML, lowercase, title-case, remove Inc/Ltd/LLC
+2026-04-22 08:00:01,293 [INFO]   title_normalisation: Strip HTML entities, truncate to 200 chars
+2026-04-22 08:00:01,293 [INFO]   location_normalisation: Map common abbreviations (SF, NYC, etc.) to full names
+2026-04-22 08:00:01,293 [INFO]   description_cleaning: Strip HTML tags, collapse whitespace, truncate to 2000 chars
+2026-04-22 08:00:01,294 [INFO]   tags_normalisation: Deduplicate, sort alphabetically, max 20 tags per job
+2026-04-22 08:00:01,294 [INFO]    → 99 clean jobs ready
+2026-04-22 08:00:01,294 [INFO] 
+💾 STEP 3: Storing in database...
+2026-04-22 08:00:01,298 [INFO] ✅ Database tables created/verified
+2026-04-22 08:00:01,399 [INFO]    → 99 new jobs inserted, 0 duplicates skipped
+2026-04-22 08:00:01,405 [INFO] 
+============================================================
+2026-04-22 08:00:01,405 [INFO] ✅ Pipeline complete. Status: success
+2026-04-22 08:00:01,406 [INFO] ============================================================
+2026-04-22 08:26:08,908 [INFO] ============================================================
+2026-04-22 08:26:08,908 [INFO] 🚀 B2B Intel Pipeline Starting
+2026-04-22 08:26:08,908 [INFO] ============================================================
+2026-04-22 08:26:08,908 [INFO] 
+📡 STEP 1: Scraping...
+2026-04-22 08:26:08,908 [INFO] Scraping RemoteOK API...
+2026-04-22 08:26:09,929 [INFO] RemoteOK: raw 99 jobs fetched
+2026-04-22 08:26:09,929 [INFO] RemoteOK: 99 valid jobs extracted
+2026-04-22 08:26:09,929 [INFO] Scraping HN Who Is Hiring...
+2026-04-22 08:26:10,646 [INFO] HN thread found: story id=22665398
+2026-04-22 08:26:11,562 [INFO] HN: fetching 150 comments...
+2026-04-22 08:28:27,246 [INFO] HN: 143 job postings extracted
+2026-04-22 08:28:27,301 [INFO] ✅ Scraping complete. Total jobs: 242
+2026-04-22 08:28:27,301 [INFO]    Saved to: data\raw\jobs_raw_20260422_025827.json
+2026-04-22 08:28:27,302 [INFO]    → 242 raw jobs collected
+2026-04-22 08:28:27,302 [INFO] 
+🧹 STEP 2: Cleaning...
+2026-04-22 08:28:27,414 [INFO] Starting clean. Input: 242 jobs
+2026-04-22 08:28:27,428 [INFO] Duplicates removed: 0
+2026-04-22 08:28:27,478 [INFO] ✅ Cleaning complete. Output: 99 jobs
+2026-04-22 08:28:27,502 [INFO] Saved: data\clean\jobs_clean_20260422_025827.csv
+2026-04-22 08:28:27,502 [INFO] Saved: data\clean\jobs_clean_latest.json
+2026-04-22 08:28:27,504 [INFO] 
+📋 CLEANING DECISIONS:
+2026-04-22 08:28:27,504 [INFO]   duplicate_strategy: Keep first occurrence, drop rest by job_id
+2026-04-22 08:28:27,504 [INFO]   missing_company: Fill with 'Unknown Company'
+2026-04-22 08:28:27,504 [INFO]   missing_title: Fill with 'Unknown Role'
+2026-04-22 08:28:27,504 [INFO]   missing_location: Fill with 'Remote' (majority of scraped jobs are remote)
+2026-04-22 08:28:27,504 [INFO]   missing_description: Fill with empty string — not required for core analytics
+2026-04-22 08:28:27,504 [INFO]   salary_missing: Keep as None/null — don't impute; salary varies wildly
+2026-04-22 08:28:27,504 [INFO]   tags_empty: Leave as empty list — not all jobs have tags
+2026-04-22 08:28:27,504 [INFO]   date_normalisation: Parse to ISO 8601 UTC. Invalid dates → scraped_at fallback
+2026-04-22 08:28:27,504 [INFO]   company_normalisation: Strip HTML, lowercase, title-case, remove Inc/Ltd/LLC
+2026-04-22 08:28:27,504 [INFO]   title_normalisation: Strip HTML entities, truncate to 200 chars
+2026-04-22 08:28:27,504 [INFO]   location_normalisation: Map common abbreviations (SF, NYC, etc.) to full names
+2026-04-22 08:28:27,504 [INFO]   description_cleaning: Strip HTML tags, collapse whitespace, truncate to 2000 chars
+2026-04-22 08:28:27,504 [INFO]   tags_normalisation: Deduplicate, sort alphabetically, max 20 tags per job
+2026-04-22 08:28:27,504 [INFO]    → 99 clean jobs ready
+2026-04-22 08:28:27,504 [INFO] 
+💾 STEP 3: Storing in database...
+2026-04-22 08:28:27,504 [INFO] ✅ Database tables created/verified
+2026-04-22 08:28:27,588 [INFO]    → 0 new jobs inserted, 99 duplicates skipped
+2026-04-22 08:28:27,595 [INFO] 
+============================================================
+2026-04-22 08:28:27,596 [INFO] ✅ Pipeline complete. Status: success
+2026-04-22 08:28:27,596 [INFO] ============================================================
+2026-04-22 08:39:23,266 [INFO] ============================================================
+2026-04-22 08:39:23,266 [INFO] 🚀 B2B Intel Pipeline Starting
+2026-04-22 08:39:23,266 [INFO] ============================================================
+2026-04-22 08:39:23,270 [INFO] 
+📡 STEP 1: Scraping...
+2026-04-22 08:39:23,271 [INFO] Scraping RemoteOK API...
+2026-04-22 08:39:24,253 [INFO] RemoteOK: raw 99 jobs fetched
+2026-04-22 08:39:24,253 [INFO] RemoteOK: 99 valid jobs extracted
+2026-04-22 08:39:24,253 [INFO] Scraping HN Who Is Hiring...
+2026-04-22 08:39:25,069 [INFO] HN thread found: story id=22665398
+2026-04-22 08:39:26,394 [INFO] HN: fetching 150 comments...
+2026-04-22 08:41:45,453 [INFO] HN: 143 job postings extracted
+2026-04-22 08:41:45,528 [INFO] ✅ Scraping complete. Total jobs: 242
+2026-04-22 08:41:45,528 [INFO]    Saved to: data\raw\jobs_raw_20260422_031145.json
+2026-04-22 08:41:45,529 [INFO]    → 242 raw jobs collected
+2026-04-22 08:41:45,529 [INFO] 
+🧹 STEP 2: Cleaning...
+2026-04-22 08:41:45,655 [INFO] Starting clean. Input: 242 jobs
+2026-04-22 08:41:45,681 [INFO] Duplicates removed: 0
+2026-04-22 08:41:45,739 [INFO] ✅ Cleaning complete. Output: 99 jobs
+2026-04-22 08:41:45,761 [INFO] Saved: data\clean\jobs_clean_20260422_031145.csv
+2026-04-22 08:41:45,761 [INFO] Saved: data\clean\jobs_clean_latest.json
+2026-04-22 08:41:45,761 [INFO] 
+📋 CLEANING DECISIONS:
+2026-04-22 08:41:45,762 [INFO]   duplicate_strategy: Keep first occurrence, drop rest by job_id
+2026-04-22 08:41:45,762 [INFO]   missing_company: Fill with 'Unknown Company'
+2026-04-22 08:41:45,762 [INFO]   missing_title: Fill with 'Unknown Role'
+2026-04-22 08:41:45,762 [INFO]   missing_location: Fill with 'Remote' (majority of scraped jobs are remote)
+2026-04-22 08:41:45,762 [INFO]   missing_description: Fill with empty string — not required for core analytics
+2026-04-22 08:41:45,762 [INFO]   salary_missing: Keep as None/null — don't impute; salary varies wildly
+2026-04-22 08:41:45,762 [INFO]   tags_empty: Leave as empty list — not all jobs have tags
+2026-04-22 08:41:45,762 [INFO]   date_normalisation: Parse to ISO 8601 UTC. Invalid dates → scraped_at fallback
+2026-04-22 08:41:45,762 [INFO]   company_normalisation: Strip HTML, lowercase, title-case, remove Inc/Ltd/LLC
+2026-04-22 08:41:45,762 [INFO]   title_normalisation: Strip HTML entities, truncate to 200 chars
+2026-04-22 08:41:45,762 [INFO]   location_normalisation: Map common abbreviations (SF, NYC, etc.) to full names
+2026-04-22 08:41:45,762 [INFO]   description_cleaning: Strip HTML tags, collapse whitespace, truncate to 2000 chars
+2026-04-22 08:41:45,764 [INFO]   tags_normalisation: Deduplicate, sort alphabetically, max 20 tags per job
+2026-04-22 08:41:45,764 [INFO]    → 99 clean jobs ready
+2026-04-22 08:41:45,764 [INFO] 
+💾 STEP 3: Storing in database...
+2026-04-22 08:41:45,773 [INFO] ✅ Database tables created/verified
+2026-04-22 08:41:45,847 [INFO]    → 0 new jobs inserted, 99 duplicates skipped
+2026-04-22 08:41:45,857 [INFO] 
+============================================================
+2026-04-22 08:41:45,859 [INFO] ✅ Pipeline complete. Status: success
+2026-04-22 08:41:45,859 [INFO] ============================================================
