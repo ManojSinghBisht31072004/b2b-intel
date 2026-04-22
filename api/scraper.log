@@ -90,3 +90,49 @@
 ============================================================
 2026-04-22 08:07:52,017 [INFO] ✅ Pipeline complete. Status: success
 2026-04-22 08:07:52,017 [INFO] ============================================================
+2026-04-22 09:05:33,841 [INFO] ============================================================
+2026-04-22 09:05:33,841 [INFO] 🚀 B2B Intel Pipeline Starting
+2026-04-22 09:05:33,841 [INFO] ============================================================
+2026-04-22 09:05:33,841 [INFO] 
+📡 STEP 1: Scraping...
+2026-04-22 09:05:33,841 [INFO] Scraping RemoteOK API...
+2026-04-22 09:05:34,717 [INFO] RemoteOK: raw 99 jobs fetched
+2026-04-22 09:05:34,717 [INFO] RemoteOK: 99 valid jobs extracted
+2026-04-22 09:05:34,717 [INFO] Scraping HN Who Is Hiring...
+2026-04-22 09:05:35,402 [INFO] HN thread found: story id=22665398
+2026-04-22 09:05:36,049 [INFO] HN: fetching 150 comments...
+2026-04-22 09:07:26,672 [INFO] HN: 143 job postings extracted
+2026-04-22 09:07:26,738 [INFO] ✅ Scraping complete. Total jobs: 242
+2026-04-22 09:07:26,738 [INFO]    Saved to: data\raw\jobs_raw_20260422_033726.json
+2026-04-22 09:07:26,739 [INFO]    → 242 raw jobs collected
+2026-04-22 09:07:26,742 [INFO] 
+🧹 STEP 2: Cleaning...
+2026-04-22 09:07:26,779 [INFO] Starting clean. Input: 242 jobs
+2026-04-22 09:07:26,803 [INFO] Duplicates removed: 0
+2026-04-22 09:07:26,916 [INFO] ✅ Cleaning complete. Output: 99 jobs
+2026-04-22 09:07:26,962 [INFO] Saved: data\clean\jobs_clean_20260422_033726.csv
+2026-04-22 09:07:26,963 [INFO] Saved: data\clean\jobs_clean_latest.json
+2026-04-22 09:07:26,963 [INFO] 
+📋 CLEANING DECISIONS:
+2026-04-22 09:07:26,964 [INFO]   duplicate_strategy: Keep first occurrence, drop rest by job_id
+2026-04-22 09:07:26,964 [INFO]   missing_company: Fill with 'Unknown Company'
+2026-04-22 09:07:26,964 [INFO]   missing_title: Fill with 'Unknown Role'
+2026-04-22 09:07:26,965 [INFO]   missing_location: Fill with 'Remote' (majority of scraped jobs are remote)
+2026-04-22 09:07:26,966 [INFO]   missing_description: Fill with empty string — not required for core analytics
+2026-04-22 09:07:26,966 [INFO]   salary_missing: Keep as None/null — don't impute; salary varies wildly
+2026-04-22 09:07:26,966 [INFO]   tags_empty: Leave as empty list — not all jobs have tags
+2026-04-22 09:07:26,967 [INFO]   date_normalisation: Parse to ISO 8601 UTC. Invalid dates → scraped_at fallback
+2026-04-22 09:07:26,967 [INFO]   company_normalisation: Strip HTML, lowercase, title-case, remove Inc/Ltd/LLC
+2026-04-22 09:07:26,970 [INFO]   title_normalisation: Strip HTML entities, truncate to 200 chars
+2026-04-22 09:07:26,971 [INFO]   location_normalisation: Map common abbreviations (SF, NYC, etc.) to full names
+2026-04-22 09:07:26,971 [INFO]   description_cleaning: Strip HTML tags, collapse whitespace, truncate to 2000 chars
+2026-04-22 09:07:26,972 [INFO]   tags_normalisation: Deduplicate, sort alphabetically, max 20 tags per job
+2026-04-22 09:07:26,976 [INFO]    → 99 clean jobs ready
+2026-04-22 09:07:26,976 [INFO] 
+💾 STEP 3: Storing in database...
+2026-04-22 09:07:26,979 [INFO] ✅ Database tables created/verified
+2026-04-22 09:07:27,033 [INFO]    → 0 new jobs inserted, 99 duplicates skipped
+2026-04-22 09:07:27,042 [INFO] 
+============================================================
+2026-04-22 09:07:27,043 [INFO] ✅ Pipeline complete. Status: success
+2026-04-22 09:07:27,043 [INFO] ============================================================
