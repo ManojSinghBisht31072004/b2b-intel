@@ -2,7 +2,7 @@
 Standalone FastAPI app for Render.
 DB connection is lazy — only connects when a request comes in.
 """
-import os, logging
+import os, logging, sys
 from datetime import datetime, timedelta
 from collections import Counter
 from typing import Optional
@@ -17,6 +17,9 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
+
+# Ensure root directory is in path for pipeline imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # ── Database — lazy connection ────────────────────────────────────────────────
 DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///./b2b_intel.db")
@@ -236,8 +239,8 @@ def trends(days: int = Query(30, ge=1, le=365)):
 def refresh(bg: BackgroundTasks):
     def run():
         try:
-            import subprocess, sys
-            subprocess.run([sys.executable, "pipeline.py"], check=True)
+            from pipeline import run_pipeline
+            run_pipeline()
         except Exception as e:
             log.error(f"Pipeline error: {e}")
     bg.add_task(run)
